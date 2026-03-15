@@ -65,6 +65,9 @@ cli
     }
   });
 
+cli.command("help", "See for help").action(async (action: String) => {
+  console.log("This is the help command.");
+});
 cli.help();
 cli.version("0.1.0");
 cli.parse();

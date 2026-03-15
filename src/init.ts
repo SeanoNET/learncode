@@ -79,6 +79,18 @@ LearnCode analyzes your diffs and provides:
 
 Usage: \`/review\`
 `,
+  'auto-review.md': `---
+command: auto-review
+description: "Automated periodic review triggered by cron"
+---
+
+# /auto-review
+
+Automated periodic review designed to run on a cron schedule (e.g., every 1 minute via \`/loop\`).
+Checks for recent changes and only intervenes when meaningful — silence is the default.
+
+This command is started automatically when you run \`/learn\`.
+`,
 };
 
 const CLAUDE_MD_SECTION = `
@@ -91,8 +103,10 @@ Available commands:
 - \`/hint\` - Get contextual hints based on current activity
 - \`/explain\` - Get explanations tailored to your code
 - \`/review\` - Review recent changes with learning feedback
+- \`/auto-review\` - Cron-triggered review (started automatically by /learn)
 
 LearnCode monitors your coding patterns and adapts its assistance level.
+When a session is active, auto-review runs every minute but stays silent unless there's something worth commenting on.
 `;
 
 function getSkillDir(): string {
