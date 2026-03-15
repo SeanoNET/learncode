@@ -6,6 +6,10 @@
     "learncode": "./dist/cli.js"
   },
   "files": ["dist/", "skill/"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeanoNET/learncode"
+  },
   "type": "module",
   "scripts": {
     "build": "bun build ./src/cli.ts --outdir ./dist --target node",
